@@ -19,14 +19,49 @@
             <a href="#beranda">Beranda</a>
             <a href="#tentang">Tentang Kami</a>
             <a href="#menu">Menu</a>
+            <a href="#produk">Produk</a>
             <a href="#kontak">Kontak</a>
         </div>
 
         <div class="navbar-extra">
-            <a id="cari"><i data-feather="search"></i></a>
-            <a id="shoppingCart"><i data-feather="shopping-cart"></i></a>
-            <a id="hamburger-menu"><i data-feather="menu"></i></a>
+            <a href="#" id="btn-cari"><i data-feather="search"></i></a>
+            <a href="#" id="btn-keranjang"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
+
+        <!-- search form -->
+        <div class="cari">
+            <input type="search" id="cari-box" name="cari-box" placeholder="Cari disini...">
+            <label for="cari-box"><i data-feather="search"></i></label>
+        </div>
+        <!-- end search form -->
+
+        <!-- shopping cart-->
+        <div class="keranjang">
+            <div class="item">
+                <div class="item-info">
+                    <img src="img/produk/americano.png" alt="americano">
+                    <div class="item-detil">
+                        <h3>Americano</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto est ut voluptates veritatis quo consequuntur ratione dignissimos rem doloremque dolore, sit corrupti accusamus fugiat molestias vel sapiente ipsum ducimus?</p>
+                        <div class="item-harga">Rp 22.500 x <span class="item-qty">1 pcs</span></div>
+                    </div>
+                </div>
+                <div class="item-action">
+                    <h3 class="item-subtotal">Rp 10.000.500</h3>
+                    <div class="item-action-btn">
+                        <div class="item-update">
+                            <i data-feather="minus" class="btn btn-item-kurang"></i>
+                            <input type="text" value="1" class="input-qty">
+                            <i data-feather="plus" class="btn btn-item-tambah"></i>
+                        </div>
+                        <i data-feather="trash-2" class="btn btn-item-hapus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end shopping cart-->
+
     </nav>
     <!-- end navbar -->
 
@@ -49,16 +84,7 @@
             </div>
             <div class="content">
                 <h3>Kenapa harus datang ke <span class="sign">kedai<span>kopi.</span></span>?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aut ratione incidunt laudantium ducimus. Id, quaerat perferendis ullam ipsam corporis doloribus. Nam ratione iusto, delectus qui laboriosam temporibus praesentium voluptates.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="tentang-img">
-                <img src="img/bg-tentang-kami.jpg" alt="tentang kami">
-            </div>
-            <div class="content">
-                <h3>Kenapa harus datang ke <span class="sign">kedai<span>kopi.</span></span>?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aut ratione incidunt laudantium ducimus. Id, quaerat perferendis ullam ipsam corporis doloribus. Nam ratione iusto, delectus qui laboriosam temporibus praesentium voluptates.</p>
+                <p><strong class="sign">Kedai<span>Kopi</span></strong> adalah salah satu jaringan tempat untuk menikmati kopi dengan suasana ternyaman di Bandung. Ide kedai Kopi ini dimulai karena para pendiri memiliki misi untuk membuat tempat untuk bersosialisasi dengan teman, kaluarga, bahkan bisa dijadikan untuk tempat bekerja.  Semangat mereka juga terbangun karena ingin sama-sama mempromosikan hebatknya kopi lokal Indonesia sebagai produk unggulan dari Indonesia ke seluruh dunia.</p>
             </div>
         </div>
     </section>
@@ -104,6 +130,172 @@
     </section>
     <!-- end menu section -->
 
+    <!-- produk section -->
+    <section id="produk" class="produk">
+        <h2><span>Produk</span> Kami</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, harum at beatae deserunt dolorem.</p>
+        <div class="row">
+            <div class="produk-card">
+                <div class="produk-img">
+                    <img src="img/produk/espresso.png" alt="espresso">
+                </div>
+                <div class="produk-deskripsi">
+                    <h3>Espresso</h3>
+                </div>
+                <div class="produk-star">
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star"></i>
+                </div>
+                <div class="produk-harga">
+                    <h4>Rp 22.500</h4>
+                    <h5>
+                        <span class="produk-harga-diskon">10%</span>
+                        <span class="produk-harga-pokok">Rp 25.000</span>
+                    </h5>
+                </div>
+                <div class="produk-icon">
+                    <a href="#"><i data-feather="shopping-cart"></i></a>
+                    <a href="#"><i data-feather="eye"></i></a>
+                </div>
+            </div>           
+            <div class="produk-card">
+                <div class="produk-img">
+                    <img src="img/produk/americano.png" alt="americano">
+                </div>
+                <div class="produk-deskripsi">
+                    <h3>Americano</h3>
+                </div>
+                <div class="produk-star">
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star"></i>
+                </div>
+                <div class="produk-harga">
+                    <h4>Rp 22.500</h4>
+                    <h5>
+                        <span class="produk-harga-diskon">10%</span>
+                        <span class="produk-harga-pokok">Rp 25.000</span>
+                    </h5>
+                </div>
+                <div class="produk-icon">
+                    <a href="#"><i data-feather="shopping-cart"></i></a>
+                    <a href="#"><i data-feather="eye"></i></a>
+                </div>
+            </div>           
+            <div class="produk-card">
+                <div class="produk-img">
+                    <img src="img/produk/latte.png" alt="latte">
+                </div>
+                <div class="produk-deskripsi">
+                    <h3>Latte</h3>
+                </div>
+                <div class="produk-star">
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star"></i>
+                </div>
+                <div class="produk-harga">
+                    <h4>Rp 22.500</h4>
+                    <h5>
+                        <span class="produk-harga-diskon">10%</span>
+                        <span class="produk-harga-pokok">Rp 25.000</span>
+                    </h5>
+                </div>
+                <div class="produk-icon">
+                    <a href="#"><i data-feather="shopping-cart"></i></a>
+                    <a href="#"><i data-feather="eye"></i></a>
+                </div>
+            </div>           
+            <div class="produk-card">
+                <div class="produk-img">
+                    <img src="img/produk/espresso.png" alt="espresso">
+                </div>
+                <div class="produk-deskripsi">
+                    <h3>Espresso</h3>
+                </div>
+                <div class="produk-star">
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star"></i>
+                </div>
+                <div class="produk-harga">
+                    <h4>Rp 22.500</h4>
+                    <h5>
+                        <span class="produk-harga-diskon">10%</span>
+                        <span class="produk-harga-pokok">Rp 25.000</span>
+                    </h5>
+                </div>
+                <div class="produk-icon">
+                    <a href="#"><i data-feather="shopping-cart"></i></a>
+                    <a href="#"><i data-feather="eye"></i></a>
+                </div>
+            </div>           
+            <div class="produk-card">
+                <div class="produk-img">
+                    <img src="img/produk/espresso.png" alt="espresso">
+                </div>
+                <div class="produk-deskripsi">
+                    <h3>Espresso</h3>
+                </div>
+                <div class="produk-star">
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star"></i>
+                </div>
+                <div class="produk-harga">
+                    <h4>Rp 22.500</h4>
+                    <h5>
+                        <span class="produk-harga-diskon">10%</span>
+                        <span class="produk-harga-pokok">Rp 25.000</span>
+                    </h5>
+                </div>
+                <div class="produk-icon">
+                    <a href="#"><i data-feather="shopping-cart"></i></a>
+                    <a href="#"><i data-feather="eye"></i></a>
+                </div>
+            </div>           
+            <div class="produk-card">
+                <div class="produk-img">
+                    <img src="img/produk/espresso.png" alt="espresso">
+                </div>
+                <div class="produk-deskripsi">
+                    <h3>Espresso</h3>
+                </div>
+                <div class="produk-star">
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star" class="star-fill"></i>
+                    <i data-feather="star"></i>
+                </div>
+                <div class="produk-harga">
+                    <h4>Rp 22.500</h4>
+                    <h5>
+                        <span class="produk-harga-diskon">10%</span>
+                        <span class="produk-harga-pokok">Rp 25.000</span>
+                    </h5>
+                </div>
+                <div class="produk-icon">
+                    <a href="#"><i data-feather="shopping-cart"></i></a>
+                    <a href="#"><i data-feather="eye"></i></a>
+                </div>
+            </div>           
+        </div>
+    </section>
+    <!-- end produk section -->
+
+
     <!-- kontak section -->
     <section id="kontak" class="kontak">
         <h2><span>Kontak</span> Kami</h2>
@@ -148,14 +340,7 @@
                 <a href="#facebook"><i data-feather="facebook"></i></a>
                 <a href="#twitter"><i data-feather="twitter"></i></a>
             </div>
-            <div class="col link">
-                <a href="#beranda">Beranda</a> 
-                <a href="#tentang">Tentang Kami</a> 
-                <a href="#menu">Menu</a>
-                <a href="#kontak">Kontak</a>
-            </div>
-        </div>
-        <div class="row">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque delectus voluptates soluta.</p>
             <h5 class="credit">&copy; Copyright 2023 by TEHAWE Project.<br>All Rights Reserved.</h5>
         </div>
     </footer>
