@@ -45,3 +45,27 @@ document.addEventListener('click', function (e) {
         keranjang.classList.remove('active');
     }
 });
+
+
+// Modal //
+const modalProdukContent = document.querySelector('#modal-produk-content');
+const btnProdukInfo = document.querySelectorAll('.btn-produk-info');
+
+btnProdukInfo.forEach((btn) => {
+    btn.onclick = (e) => {
+        modalProdukContent.style.display = 'flex';
+        e.preventDefault();
+    };
+});
+
+// klik tombol close modal
+document.querySelector('.btn-close-modal').onclick = (e) => {
+    modalProdukContent.style.display = 'none';
+    e.preventDefault();
+}
+// close modal dimanapun
+window.onclick = (e) => {
+    if (e.target === modalProdukContent) {
+        modalProdukContent.style.display = 'none';
+    }
+}

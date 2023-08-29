@@ -34,6 +34,12 @@ body {
   color: var(--primary);
 }
 
+/* star-fill */
+.star-fill{
+    fill: var(--primary);
+    color: var(--primary);
+}
+
 /* Navbar */
 
 .navbar {
@@ -134,12 +140,16 @@ body {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: #fff;
+    background-color: #FFF;
     width: 35rem;
     height: 100vh;
     transition: 0.3;
     color: var(--bg);
     padding: 0 1.5rem;
+}
+.keranjang .title {
+  font-size: 2rem;
+  margin-top: 1rem;
 }
 .keranjang .item {
     margin: 2rem 0;
@@ -147,11 +157,8 @@ body {
     align-items: start;
     gap: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--secondary);
+    border-bottom: 1px dotted var(--bg);
     justify-content: space-between;
-}
-.keranjang .item > * {
-    border: 1px solid var(--primary);
 }
 .keranjang .item-info {
     display: flex;
@@ -171,32 +178,56 @@ body {
 .keranjang .item-info .item-detil .item-harga {
     font-size: 1.3rem;
 }
-.keranjang .item .item-action .item-action-btn {
-    display: flex;
-    justify-content: space-between;
-}
 .keranjang .item .item-action .item-subtotal {
-    font-size: 1.5rem;
-    width: 12rem;
-    text-align: center;
-    padding-bottom: 1rem;
+  font-size: 1.3rem;
+  width: 12rem;
+  text-align: end;
+  padding: 0.5rem 0;
+}
+.keranjang .item .item-action .item-action-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.keranjang .item .item-action .item-action-btn .btn.btn-item-hapus {
+  display:flex;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  color: #000;
+  align-items: center;
+  justify-content: center;
+}
+.keranjang .item .item-action .item-action-btn .btn.btn-item-hapus:hover {
+  background-color: #fff;
+  color: var(--primary);
 }
 .keranjang .item .item-action .item-action-btn .btn {
     cursor: pointer;
     padding: 0.25rem;
+    color: #fff;
+    background-color: var(--bg);
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    margin: 0 0.5rem;
+    align-items: center;
+    text-align: center;
 }
 .keranjang .item .item-action .item-action-btn .btn:hover {
-    color: var(--primary);
+    background-color: var(--primary);
 }
 .keranjang .item .item-action .item-update {
-    border: 1px solid var(--secondary);
+    display: flex;
     align-items: center;
 }
-.keranjang .item .item-action .item-update input {
-    width: 2rem;
+.keranjang .item .item-action .item-update .input-qty {
+    width: 2.5rem;
     text-align: center;
-    padding-bottom: 0.2rem;
-    border: 1px solid #000;
+    padding: 0.25rem 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--bg);
 }
 .keranjang.active {
     right: 0;
@@ -252,10 +283,14 @@ body {
   display: inline-block;
   padding: 1rem 2rem;
   font-size: 1.4rem;
+  font-weight: 500;
   color: #fff;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+.hero .content .cta:hover {
+  background-color: var(--primary);
 }
 
 /* Tentang Kami Section */
@@ -288,7 +323,7 @@ body {
 }
 
 .tentang .row .tentang-img {
-  flex: 1 1 45rem;
+  flex: 1 1 25rem;
 }
 
 .tentang .row .tentang-img img {
@@ -297,7 +332,7 @@ body {
 
 .tentang .row .content {
   flex: 1 1 35rem;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .tentang .row .content h3 {
@@ -307,7 +342,7 @@ body {
 
 .tentang .row .content p {
   margin-bottom: 0.8rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 200;
   line-height: 1.5;
 }
@@ -338,6 +373,7 @@ body {
   text-align: center;
   padding-bottom: 3rem;
   opacity: 0.9;
+  font-size: 1.5rem;
 }
 .menu .row .menu-card:hover {
   opacity: 1;
@@ -362,7 +398,7 @@ body {
 .produk .row .produk-card {
     padding: 0.5rem;
     border: 1px solid var(--bg-secondary);
-    border-radius: 10px;
+    border-radius: 3rem;
     text-align: center;
     background-color: var(--bg-secondary);
 }
@@ -373,6 +409,9 @@ body {
     border-bottom: 1px solid #666;
     padding-bottom: 1rem;
     margin-bottom: 0.5rem;
+}
+.produk .row .produk-deskripsi h3 {
+  font-size: 2.5rem;
 }
 .produk .row .produk-card .produk-icon {
     display: flex;
@@ -399,7 +438,8 @@ body {
     padding: 1rem 0;
 }
 .produk .row .produk-card .produk-img img {
-    width: 90%;
+    width: 95%;
+    border-radius: 2rem;
 }
 .produk .row .produk-card .produk-star{
     font-size: 1.7rem;
@@ -447,12 +487,18 @@ body {
   padding: 5rem 2rem;
   text-align: center;
 }
+.kontak .row .kontak-form .kontak-title {
+  font-size: 1.8rem;
+  margin: 0 auto;
+}
 .kontak .row .kontak-form .form-group {
   display: flex;
   align-items: center;
   margin-top: 2rem;
   background: var(--bg);
   border: 1px solid var(--bg);
+  border-radius: 1rem;
+  overflow: hidden;
 }
 .kontak .row .kontak-form .form-group:hover {
   border: 1px solid var(--primary);
@@ -463,7 +509,7 @@ body {
 .kontak .row .kontak-form .form-group .btn-kirim {
   width: 100%;
   padding: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   background: none;
   color: #fff;
 }
@@ -471,10 +517,14 @@ body {
   padding-left: 1rem;
 }
 .kontak .row .kontak-form .form-group .btn-kirim {
-  background: var(--primary);
   cursor: pointer;
+  background-color: var(--secondary);
+  font-size: 1.5rem;
+  border: 1px solid var(--bg);
+}
+.kontak .row .kontak-form .form-group .btn-kirim:hover {
+  background-color: var(--primary);
   border: 1px solid var(--primary);
-  font-size: 1.7rem;
 }
 
 /* Footer */
@@ -513,6 +563,109 @@ footer .row .credit {
     font-size: 0.75rem;
 }
 
+/* Modal BOX */
+.modal {
+    display: none;
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(25, 25, 25, 0.75);
+}
+.modal-container {
+    position: relative;
+    background-color: #FFF;
+    color: var(--bg);
+    margin: 15% auto auto auto;
+    padding: 1.2rem;
+    border: 1px solid #666;
+    width: 80%;
+    overflow: auto;
+    animation: animateModal 0.5s;
+}
+.modal .modal-container .btn-close-modal {
+  position: absolute;
+  right: 1rem;
+  color: var(--bg);
+}
+.modal .modal-container .btn-close-modal:hover {
+  color: var(--primary);
+}
+.modal .modal-content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.modal .modal-container .modal-content .produk-content-img {
+    height: 20rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+.modal .modal-container .modal-content .produk-content .produk-content-deskripsi {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin: 1.2rem 0;
+}
+.modal .modal-container .modal-content .btn-tambah-keranjang {
+    display: flex;
+    gap: 1rem;
+    width: 11rem;
+    background-color: var(--secondary);
+    color: #FFF;
+    margin-top: 1rem;
+    padding: 0.5rem 1.3rem;
+    align-items: center;
+    border-radius: 0.3rem;
+}
+.modal .modal-container .modal-content .produk-content .btn-tambah-keranjang span {
+    font-size: 1.2rem;
+}
+.modal .modal-container .modal-content .produk-content .btn-tambah-keranjang:hover {
+    background-color: var(--primary);
+}
+.produk-star {
+    color: var(--primary);
+}
+.produk-content-harga {
+    margin: 0.5rem 0 0;
+}
+.produk-content-harga h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    
+}
+.produk-content-harga span {
+    display: inline-block;
+    padding: 0.3rem;
+    margin: 0 0 1rem;
+}
+
+.produk-content-harga span.produk-harga-diskon {
+    border-radius: 0.5rem;
+    background-color: var(--secondary);
+}
+.produk-content-harga span.produk-harga-pokok {
+    text-decoration: line-through;
+    font-style: oblique;
+    font-weight: 500;
+    color: #555;
+}
+
+/* modal animation */
+@keyframes animateModal {
+    from{
+        top: -300px;
+        opacity: 0;
+    }
+    to{
+        top:0;
+        opacity: 1;
+    }
+    
+}
+
 /* Media Queries */
 
 /* Laptop */
@@ -549,6 +702,12 @@ footer .row .credit {
     margin: 1.5rem;
     padding: 0.5rem;
     font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.3);
   }
   .navbar .cari{
     width: 90%;
@@ -589,6 +748,10 @@ footer .row .credit {
   }
   .kontak .row .kontak-form {
     padding: 0 1rem 1.5rem;
+  }
+
+  .modal .modal-content {
+    flex-wrap: wrap;
   }
 }
 
