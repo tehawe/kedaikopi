@@ -196,7 +196,8 @@ body {
   background-color: #fff;
   color: #000;
   align-items: center;
-  justify-content: center;
+  margin-right: 0;
+  padding-right: 0;
 }
 .keranjang .item .item-action .item-action-btn .btn.btn-item-hapus:hover {
   background-color: #fff;
